@@ -3,13 +3,32 @@ package info.metadude.java.library.brockman.models;
 
 public class Stream {
 
+    public enum TYPE {
+        AUDIO("audio"),
+        MUSIC("music"),
+        SLIDES("slides"),
+        VIDEO("video");
+
+        private final String text;
+
+        TYPE(String text) {
+            this.text = text;
+        }
+
+        @Override
+        public String toString() {
+            return text;
+        }
+
+    }
+
     public final String display;
 
     public final boolean isTranslated;
 
     public final String slug;
 
-    public final String type;
+    public final TYPE type;
 
     public final VideoSize videoSize;
 
@@ -18,7 +37,7 @@ public class Stream {
     public Stream(String display,
                   boolean isTranslated,
                   String slug,
-                  String type,
+                  TYPE type,
                   VideoSize videoSize,
                   Urls urls) {
         this.display = display;
@@ -41,7 +60,7 @@ public class Stream {
         return isTranslated == stream.isTranslated &&
                 !(display != null ? !display.equals(stream.display) : stream.display != null) &&
                 !(slug != null ? !slug.equals(stream.slug) : stream.slug != null) &&
-                !(type != null ? !type.equals(stream.type) : stream.type != null) &&
+                type == stream.type &&
                 !(videoSize != null ? !videoSize.equals(stream.videoSize) : stream.videoSize != null) &&
                 !(urls != null ? !urls.equals(stream.urls) : stream.urls != null);
     }
@@ -63,7 +82,7 @@ public class Stream {
                 "display='" + display + '\'' +
                 ", isTranslated=" + isTranslated +
                 ", slug='" + slug + '\'' +
-                ", type='" + type + '\'' +
+                ", type=" + type +
                 ", videoSize=" + videoSize +
                 ", urls=" + urls +
                 '}';

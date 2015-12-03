@@ -26,6 +26,7 @@ public final class ApiModule {
         }
 
         Moshi moshi = new Moshi.Builder()
+                .add(new StreamTypeAdapter())
                 .add(new VideoSizeAdapter())
                 .build();
 
