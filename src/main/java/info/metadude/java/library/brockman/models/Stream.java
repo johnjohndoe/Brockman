@@ -1,6 +1,8 @@
 
 package info.metadude.java.library.brockman.models;
 
+import java.util.List;
+
 public class Stream {
 
     public enum TYPE {
@@ -32,14 +34,14 @@ public class Stream {
 
     public final VideoSize videoSize;
 
-    public final Urls urls;
+    public final List<Url> urls;
 
     public Stream(String display,
                   boolean isTranslated,
                   String slug,
                   TYPE type,
                   VideoSize videoSize,
-                  Urls urls) {
+                  List<Url> urls) {
         this.display = display;
         this.isTranslated = isTranslated;
         this.slug = slug;
