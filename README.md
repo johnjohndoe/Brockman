@@ -48,7 +48,7 @@ and to your application module `build.gradle`:
 
 ```groovy
 dependencies {
-    compile 'info.metadude.java.library.brockman:brockman-library:{$version}'
+    compile "info.metadude.java.library.brockman:brockman-library:{$version}"
 }
 ```
 
