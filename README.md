@@ -52,6 +52,30 @@ dependencies {
 }
 ```
 
+Alternatively, you can use [JitPack][jitpack] to fetch and build the sources
+directly from this repository.
+Therefore, add JitPack to your top level `build.gradle`:
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+and then reference the library project in your application module `build.gradle`:
+
+```groovy
+dependencies {
+    compile "com.github.johnjohndoe:Brockman:{$hash}"
+}
+```
+
+The `{$hash}` can be a branch name such as `master` or an actual commit hash.
+
+
 ## Tests
 
 Run the following command to execute all tests:
@@ -84,3 +108,4 @@ $ ./gradlew clean test
 
 [tobias-preuss]: https://github.com/johnjohndoe
 [kent-brockman-wikipedia]: https://en.wikipedia.org/wiki/Kent_Brockman
+[jitpack]: https://jitpack.io
