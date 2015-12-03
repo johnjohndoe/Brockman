@@ -1,6 +1,6 @@
-package info.metadude.java.library.brockman.test;
+package info.metadude.java.library.brockman.adapters.test;
 
-import info.metadude.java.library.brockman.UrlTypeAdapter;
+import info.metadude.java.library.brockman.adapters.UrlTypeAdapter;
 import info.metadude.java.library.brockman.models.Url;
 import org.junit.Test;
 import org.junit.runner.RunWith;

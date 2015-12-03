@@ -1,6 +1,6 @@
-package info.metadude.java.library.brockman.test;
+package info.metadude.java.library.brockman.adapters.test;
 
-import info.metadude.java.library.brockman.VideoSizeAdapter;
+import info.metadude.java.library.brockman.adapters.VideoSizeAdapter;
 import info.metadude.java.library.brockman.models.VideoSize;
 import org.junit.Test;
 import org.junit.runner.RunWith;

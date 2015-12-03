@@ -1,10 +1,10 @@
-package info.metadude.java.library.brockman.test;
+package info.metadude.java.library.brockman.adapters.test;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
-import info.metadude.java.library.brockman.StreamAdapter;
-import info.metadude.java.library.brockman.StreamTypeAdapter;
-import info.metadude.java.library.brockman.VideoSizeAdapter;
+import info.metadude.java.library.brockman.adapters.StreamAdapter;
+import info.metadude.java.library.brockman.adapters.StreamTypeAdapter;
+import info.metadude.java.library.brockman.adapters.VideoSizeAdapter;
 import info.metadude.java.library.brockman.models.Stream;
 import info.metadude.java.library.brockman.models.Url;
 import info.metadude.java.library.brockman.models.VideoSize;

@@ -1,6 +1,6 @@
-package info.metadude.java.library.brockman.test;
+package info.metadude.java.library.brockman.adapters.test;
 
-import info.metadude.java.library.brockman.StreamTypeAdapter;
+import info.metadude.java.library.brockman.adapters.StreamTypeAdapter;
 import info.metadude.java.library.brockman.models.Stream;
 import org.junit.Test;
 import org.junit.runner.RunWith;

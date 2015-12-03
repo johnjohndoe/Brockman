@@ -1,4 +1,4 @@
-package info.metadude.java.library.brockman;
+package info.metadude.java.library.brockman.adapters;
 
 import com.squareup.moshi.FromJson;
 import com.squareup.moshi.JsonDataException;
