@@ -11,6 +11,13 @@ A Java library containing a parser and models for the streaming media API of the
 This library is named after [*Kent Brockman*][kent-brockman-wikipedia], the news anchor from *The Simpsons*.
 
 
+## Demo application
+
+Please note there is an Android demo application for this library available:
+
+* https://github.com/johnjohndoe/BrockmanDemo
+
+
 ## Usage
 
 The library can be accessed via the `ApiModule` class.
