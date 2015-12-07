@@ -13,12 +13,13 @@ import java.util.List;
 
 public final class ApiModule {
 
-    public static StreamsService provideStreamsService() {
-        return provideStreamsService(null);
+    public static StreamsService provideStreamsService(final String baseUrl) {
+        return provideStreamsService(baseUrl, null);
     }
 
-    public static StreamsService provideStreamsService(final List<Interceptor> httpClientInterceptors) {
-        return createRetrofit(StreamsService.BASE_URL, httpClientInterceptors)
+    public static StreamsService provideStreamsService(
+            final String baseUrl, final List<Interceptor> httpClientInterceptors) {
+        return createRetrofit(baseUrl, httpClientInterceptors)
                 .create(StreamsService.class);
     }
 

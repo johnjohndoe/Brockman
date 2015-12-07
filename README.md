@@ -23,9 +23,20 @@ Please note there is an Android demo application for this library available:
 The library can be accessed via the `ApiModule` class.
 
 ```java
-StreamsService streamsService = ApiModule.provideStreamsService();
+StreamsService streamsService = ApiModule.provideStreamsService("https://streaming.media.ccc.de");
 
-Call<List<Offer>> getOffersCall = service.getOffers();
+Call<List<Offer>> getOffersCall = service.getOffers("/streams/v1.json");
+// Execute getOffers call to send a request to the webserver.
+```
+
+Since the CCC streaming media API is only online at the time of the conference
+the following static JSON response might be handy for development and debugging:
+
+```java
+StreamsService streamsService = ApiModule.provideStreamsService("https://gist.githubusercontent.com");
+
+Call<List<Offer>> getOffersCall = service.getOffers(
+    "/MaZderMind/d5737ab867ade7888cb4/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json");
 // Execute getOffers call to send a request to the webserver.
 ```
 

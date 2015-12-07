@@ -17,19 +17,26 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 
+/**
+ * Network test using an example data set
+ * since the production API is only online at the time of the conference.
+ * Assumption: Data format stays the same 8-)
+ */
 @RunWith(JUnit4.class)
-public final class StreamsServiceTest {
+public final class ExampleStreamsServiceTest {
 
     protected StreamsService streamsService;
 
     @Before
     public void initStreamService() {
-        streamsService = ApiModule.provideStreamsService();
+        streamsService = ApiModule.provideStreamsService("https://gist.githubusercontent.com");
     }
 
     @Test
-    public void testThatRealServerIsReachable() {
-        Call<List<Offer>> streamsResponseCall = streamsService.getOffers();
+    public void testThatExampleDataSetIsReadable() {
+        Call<List<Offer>> streamsResponseCall = streamsService.getOffers(
+                "/MaZderMind/d5737ab867ade7888cb4/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json"
+        );
         try {
             Response<List<Offer>> response = streamsResponseCall.execute();
             if (response.isSuccess()) {
