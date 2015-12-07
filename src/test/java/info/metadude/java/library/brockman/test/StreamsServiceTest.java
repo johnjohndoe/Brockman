@@ -24,12 +24,14 @@ public final class StreamsServiceTest {
 
     @Before
     public void initStreamService() {
-        streamsService = ApiModule.provideStreamsService();
+        streamsService = ApiModule.provideStreamsService("https://gist.githubusercontent.com");
     }
 
     @Test
     public void testThatRealServerIsReachable() {
-        Call<List<Offer>> streamsResponseCall = streamsService.getOffers();
+        Call<List<Offer>> streamsResponseCall = streamsService.getOffers(
+                "/MaZderMind/d5737ab867ade7888cb4/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json"
+        );
         try {
             Response<List<Offer>> response = streamsResponseCall.execute();
             if (response.isSuccess()) {
