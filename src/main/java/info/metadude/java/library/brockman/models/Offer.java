@@ -5,11 +5,14 @@ import java.util.List;
 
 public class Offer {
 
+    public final String conference;
+
     public final String group;
 
     public final List<Room> rooms;
 
-    public Offer(String group, List<Room> rooms) {
+    public Offer(String conference, String group, List<Room> rooms) {
+        this.conference = conference;
         this.group = group;
         this.rooms = rooms;
     }
@@ -23,13 +26,15 @@ public class Offer {
             return false;
         }
         Offer offer = (Offer) other;
-        return !(group != null ? !group.equals(offer.group) : offer.group != null) &&
+        return !(conference != null ? !conference.equals(offer.conference) : offer.conference != null) &&
+                !(group != null ? !group.equals(offer.group) : offer.group != null) &&
                 !(rooms != null ? !rooms.equals(offer.rooms) : offer.rooms != null);
     }
 
     @Override
     public int hashCode() {
-        int result = group != null ? group.hashCode() : 0;
+        int result = conference != null ? conference.hashCode() : 0;
+        result = 31 * result + (group != null ? group.hashCode() : 0);
         result = 31 * result + (rooms != null ? rooms.hashCode() : 0);
         return result;
     }
@@ -37,7 +42,8 @@ public class Offer {
     @Override
     public String toString() {
         return "Offer{" +
-                "group='" + group + '\'' +
+                "conference='" + conference + '\'' +
+                ", group='" + group + '\'' +
                 ", rooms=" + rooms +
                 '}';
     }
