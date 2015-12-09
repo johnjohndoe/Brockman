@@ -26,7 +26,7 @@ public class UrlTypeAdapter {
         if (type.equalsIgnoreCase(Url.TYPE.WEBM.toString())) {
             return Url.TYPE.WEBM;
         }
-        throw new JsonDataException("Unknown URL type: " + type);
+        return Url.TYPE.UNKNOWN;
     }
 
 }

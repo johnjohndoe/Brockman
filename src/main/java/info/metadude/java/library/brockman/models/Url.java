@@ -7,7 +7,8 @@ public class Url {
         MP3("mp3"),
         OPUS("opus"),
         WEBM("webm"),
-        HLS("hls");
+        HLS("hls"),
+        UNKNOWN("Unknown URL type");
 
         private final String text;
 

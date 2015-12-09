@@ -1,6 +1,7 @@
 package info.metadude.java.library.brockman.adapters.test;
 
 import info.metadude.java.library.brockman.adapters.UrlTypeAdapter;
+import info.metadude.java.library.brockman.models.Stream;
 import info.metadude.java.library.brockman.models.Url;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -64,14 +65,8 @@ public final class UrlTypeAdapterTest {
 
     @Test
     public void fromJsonWithUnknownType() throws Exception {
-        String type = "unknown-type";
-        try {
-            adapter.fromJson(type);
-            fail();
-        } catch (Exception e) {
-            assertThat(e.getMessage())
-                    .isEqualTo("Unknown URL type: " + type);
-        }
+        assertThat(adapter.fromJson("unknown-type"))
+                .isEqualTo(Url.TYPE.UNKNOWN);
     }
 
 }
