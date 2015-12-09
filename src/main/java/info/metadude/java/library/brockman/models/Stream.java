@@ -9,7 +9,8 @@ public class Stream {
         AUDIO("audio"),
         MUSIC("music"),
         SLIDES("slides"),
-        VIDEO("video");
+        VIDEO("video"),
+        UNKNOWN("Unknown stream type");
 
         private final String text;
 

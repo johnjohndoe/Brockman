@@ -1,7 +1,6 @@
 package info.metadude.java.library.brockman.adapters;
 
 import com.squareup.moshi.FromJson;
-import com.squareup.moshi.JsonDataException;
 import com.squareup.moshi.ToJson;
 import info.metadude.java.library.brockman.models.Stream;
 
@@ -26,7 +25,7 @@ public class StreamTypeAdapter {
         if (type.equalsIgnoreCase(Stream.TYPE.VIDEO.toString())) {
             return Stream.TYPE.VIDEO;
         }
-        throw new JsonDataException("Unknown stream type: " + type);
+        return Stream.TYPE.UNKNOWN;
     }
 
 }

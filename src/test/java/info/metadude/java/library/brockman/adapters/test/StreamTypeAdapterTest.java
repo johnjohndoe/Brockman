@@ -64,14 +64,8 @@ public final class StreamTypeAdapterTest {
 
     @Test
     public void fromJsonWithUnknownType() throws Exception {
-        String type = "unknown-type";
-        try {
-            adapter.fromJson(type);
-            fail();
-        } catch (Exception e) {
-            assertThat(e.getMessage())
-                    .isEqualTo("Unknown stream type: " + type);
-        }
+        assertThat(adapter.fromJson("unknown-type"))
+                .isEqualTo(Stream.TYPE.UNKNOWN);
     }
 
 }
