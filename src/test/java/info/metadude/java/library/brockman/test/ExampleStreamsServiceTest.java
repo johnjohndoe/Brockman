@@ -35,7 +35,7 @@ public final class ExampleStreamsServiceTest {
     @Test
     public void testThatExampleDataSetIsReadable() {
         Call<List<Offer>> streamsResponseCall = streamsService.getOffers(
-                "/MaZderMind/d5737ab867ade7888cb4/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json"
+                "/johnjohndoe/7c84b77fdbcaa332e4d8/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json"
         );
         try {
             Response<List<Offer>> response = streamsResponseCall.execute();
