@@ -66,7 +66,7 @@ and to your application module `build.gradle`:
 
 ```groovy
 dependencies {
-    compile "info.metadude.java.library.brockman:brockman-library:{$version}"
+    compile "info.metadude.java.library.brockman:brockman-library:${version}"
 }
 ```
 
@@ -87,7 +87,7 @@ and then reference the library project in your application module `build.gradle`
 
 ```groovy
 dependencies {
-    compile "com.github.johnjohndoe:Brockman:{$hash}"
+    compile "com.github.johnjohndoe:Brockman:${hash}"
 }
 ```
 
