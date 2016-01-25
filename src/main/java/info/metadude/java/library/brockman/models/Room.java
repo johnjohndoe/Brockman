@@ -1,6 +1,8 @@
 
 package info.metadude.java.library.brockman.models;
 
+import com.squareup.moshi.Json;
+
 import java.util.List;
 
 public class Room {
@@ -9,7 +11,8 @@ public class Room {
 
     public final String link;
 
-    public final String schedulename;
+    @Json(name = "scheduleName")
+    public final String scheduleName;
 
     public final String slug;
 
@@ -19,13 +22,13 @@ public class Room {
 
     public Room(String display,
                 String link,
-                String schedulename,
+                String scheduleName,
                 String slug,
                 List<Stream> streams,
                 String thumb) {
         this.display = display;
         this.link = link;
-        this.schedulename = schedulename;
+        this.scheduleName = scheduleName;
         this.slug = slug;
         this.streams = streams;
         this.thumb = thumb;
@@ -42,7 +45,7 @@ public class Room {
         Room room = (Room) other;
         return !(display != null ? !display.equals(room.display) : room.display != null) &&
                 !(link != null ? !link.equals(room.link) : room.link != null) &&
-                !(schedulename != null ? !schedulename.equals(room.schedulename) : room.schedulename != null) &&
+                !(scheduleName != null ? !scheduleName.equals(room.scheduleName) : room.scheduleName != null) &&
                 !(slug != null ? !slug.equals(room.slug) : room.slug != null) &&
                 !(streams != null ? !streams.equals(room.streams) : room.streams != null) &&
                 !(thumb != null ? !thumb.equals(room.thumb) : room.thumb != null);
@@ -52,7 +55,7 @@ public class Room {
     public int hashCode() {
         int result = display != null ? display.hashCode() : 0;
         result = 31 * result + (link != null ? link.hashCode() : 0);
-        result = 31 * result + (schedulename != null ? schedulename.hashCode() : 0);
+        result = 31 * result + (scheduleName != null ? scheduleName.hashCode() : 0);
         result = 31 * result + (slug != null ? slug.hashCode() : 0);
         result = 31 * result + (streams != null ? streams.hashCode() : 0);
         result = 31 * result + (thumb != null ? thumb.hashCode() : 0);
@@ -64,7 +67,7 @@ public class Room {
         return "Room{" +
                 "display='" + display + '\'' +
                 ", link='" + link + '\'' +
-                ", schedulename='" + schedulename + '\'' +
+                ", scheduleName='" + scheduleName + '\'' +
                 ", slug='" + slug + '\'' +
                 ", streams=" + streams +
                 ", thumb='" + thumb + '\'' +
