@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import retrofit.Call;
-import retrofit.Response;
+import retrofit2.Call;
+import retrofit2.Response;
 
 import java.io.IOException;
 import java.util.List;
@@ -39,7 +39,7 @@ public final class ExampleStreamsServiceTest {
         );
         try {
             Response<List<Offer>> response = streamsResponseCall.execute();
-            if (response.isSuccess()) {
+            if (response.isSuccessful()) {
                 List<Offer> offers = response.body();
                 // Expect at least some data
                 assertThat(offers)

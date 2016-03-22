@@ -1,12 +1,12 @@
 package info.metadude.java.library.brockman;
 
 import com.squareup.moshi.Moshi;
-import com.squareup.okhttp.OkHttpClient;
 import info.metadude.java.library.brockman.adapters.StreamAdapter;
 import info.metadude.java.library.brockman.adapters.StreamTypeAdapter;
 import info.metadude.java.library.brockman.adapters.VideoSizeAdapter;
-import retrofit.MoshiConverterFactory;
-import retrofit.Retrofit;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public final class ApiModule {
 
