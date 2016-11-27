@@ -11,7 +11,7 @@ public class Room {
 
     public final String link;
 
-    @Json(name = "scheduleName")
+    @Json(name = "schedulename")
     public final String scheduleName;
 
     public final String slug;
