@@ -32,7 +32,7 @@ public class StreamAdapter {
 
     private List<Url> getUrls(Map<String, Object> urlsJson) {
         Set<String> urlTypes = urlsJson.keySet();
-        List<Url> urls = new ArrayList<Url>(urlTypes.size());
+        List<Url> urls = new ArrayList<>(urlTypes.size());
         for (String urlType : urlTypes) {
             @SuppressWarnings("unchecked")
             Map<String, String> urlProperties = (Map<String, String>) urlsJson.get(urlType);
