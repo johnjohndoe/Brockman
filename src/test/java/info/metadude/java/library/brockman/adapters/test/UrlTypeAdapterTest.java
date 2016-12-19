@@ -1,14 +1,12 @@
 package info.metadude.java.library.brockman.adapters.test;
 
 import info.metadude.java.library.brockman.adapters.UrlTypeAdapter;
-import info.metadude.java.library.brockman.models.Stream;
 import info.metadude.java.library.brockman.models.Url;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.fail;
 
 @RunWith(JUnit4.class)
 public final class UrlTypeAdapterTest {
