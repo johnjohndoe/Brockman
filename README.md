@@ -25,7 +25,7 @@ The library can be accessed via the `ApiModule` class.
 ```java
 StreamsService streamsService = ApiModule.provideStreamsService("https://streaming.media.ccc.de");
 
-Call<List<Offer>> getOffersCall = service.getOffers("/streams/v1.json");
+Call<List<Offer>> getOffersCall = service.getOffers("/streams/v2.json");
 // Execute getOffers call to send a request to the webserver.
 ```
 
@@ -36,7 +36,7 @@ the following static JSON response might be handy for development and debugging:
 StreamsService streamsService = ApiModule.provideStreamsService("https://gist.githubusercontent.com");
 
 Call<List<Offer>> getOffersCall = service.getOffers(
-    "/johnjohndoe/7c84b77fdbcaa332e4d8/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json");
+    "/johnjohndoe/617bbfa2ac36f5148a049548b419e299/raw/7ab4e206f19ed4d63a67917fe6e3a15a96218ac9/streams-v2.json");
 // Execute getOffers call to send a request to the webserver.
 ```
 

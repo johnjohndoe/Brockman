@@ -2,8 +2,8 @@ package info.metadude.java.library.brockman.test;
 
 import info.metadude.java.library.brockman.ApiModule;
 import info.metadude.java.library.brockman.StreamsService;
+import info.metadude.java.library.brockman.models.Group;
 import info.metadude.java.library.brockman.models.Offer;
-import info.metadude.java.library.brockman.models.Room;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +35,7 @@ public final class ExampleStreamsServiceTest {
     @Test
     public void testThatExampleDataSetIsReadable() {
         Call<List<Offer>> streamsResponseCall = streamsService.getOffers(
-                "/johnjohndoe/7c84b77fdbcaa332e4d8/raw/5c0b0f4edfc8e939029b1e539a2ef5757601b205/streams-v1.json"
+                "/johnjohndoe/617bbfa2ac36f5148a049548b419e299/raw/7ab4e206f19ed4d63a67917fe6e3a15a96218ac9/streams-v2.json"
         );
         try {
             Response<List<Offer>> response = streamsResponseCall.execute();
@@ -57,15 +57,31 @@ public final class ExampleStreamsServiceTest {
     }
 
     private void testOffer(Offer offer) {
+        // Offer
         assertThat(offer).isNotNull();
-        // Rooms
-        List<Room> rooms = offer.rooms;
-        assertThat(rooms)
+        assertThat(offer.author).isNotNull();
+        assertThat(offer.conference).isNotNull();
+        assertThat(offer.description).isNotNull();
+        assertThat(offer.endsAt).isNotNull();
+        assertThat(offer.keywords).isNotNull();
+        assertThat(offer.slug).isNotNull();
+        assertThat(offer.startsAt).isNotNull();
+        assertThat(offer.groups)
                 .isNotNull()
                 .isNotEmpty();
         // Group
-        String group = offer.group;
-        assertThat(group)
+        for (Group group : offer.groups) {
+            testGroup(group);
+        }
+    }
+
+    private void testGroup(Group group) {
+        assertThat(group).isNotNull();
+        assertThat(group.group)
+                .isNotNull()
+                .isNotEmpty();
+        // Rooms
+        assertThat(group.rooms)
                 .isNotNull()
                 .isNotEmpty();
     }
