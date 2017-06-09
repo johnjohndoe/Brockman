@@ -16,6 +16,11 @@ repositories {
     mavenCentral()
 }
 
+versioneye {
+    exclude project.configurations.findAll { !it.canBeResolved }*.name as String[]
+}
+
+
 archivesBaseName = "${artifactId}-${versionName}"
 
 compileJava {
