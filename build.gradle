@@ -10,12 +10,11 @@ buildscript {
 
 apply plugin: 'org.standardout.versioneye'
 apply plugin: 'com.github.ben-manes.versions'
+apply plugin: 'java'
 
 repositories {
     mavenCentral()
 }
-
-apply plugin: 'java'
 
 archivesBaseName = "${artifactId}-${versionName}"
 
