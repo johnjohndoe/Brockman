@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.standardout:gradle-versioneye-plugin:1.4.0'
+        classpath 'org.standardout:gradle-versioneye-plugin:1.5.0'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
     }
 }
@@ -14,10 +14,6 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
-}
-
-versioneye {
-    exclude project.configurations.findAll { !it.canBeResolved }*.name as String[]
 }
 
 
