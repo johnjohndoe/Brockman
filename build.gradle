@@ -7,8 +7,8 @@ buildscript {
     }
 }
 
-apply plugin: 'com.github.ben-manes.versions'
-apply plugin: 'java'
+apply plugin: "com.github.ben-manes.versions"
+apply plugin: "java"
 
 repositories {
     mavenCentral()
@@ -36,4 +36,4 @@ tasks.matching { it instanceof Test }.all {
     testLogging.events = ["failed", "passed", "skipped"]
 }
 
-apply from: 'gradle/deploy.gradle'
+apply from: "gradle/deploy.gradle"

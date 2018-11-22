@@ -1,4 +1,4 @@
-apply plugin: 'maven-publish'
+apply plugin: "maven-publish"
 
 task sourceJar(type: Jar) {
     from sourceSets.main.allJava
