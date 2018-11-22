@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/johnjohndoe/Brockman.svg)](https://travis-ci.org/johnjohndoe/Brockman) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![VersionEye](https://www.versioneye.com/user/projects/565cea4572a20a000e04039c/badge.svg)](https://www.versioneye.com/user/projects/565cea4572a20a000e04039c)
+[![Build Status](https://travis-ci.org/johnjohndoe/Brockman.svg)](https://travis-ci.org/johnjohndoe/Brockman) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/)
 
 # Brockman library
 
