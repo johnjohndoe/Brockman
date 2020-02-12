@@ -29,7 +29,7 @@ dependencies {
     compile "com.squareup.moshi:moshi:1.8.0"
 
     testCompile "junit:junit:4.13"
-    testCompile "org.assertj:assertj-core:2.9.1"
+    testCompile "org.assertj:assertj-core:3.15.0"
 }
 
 tasks.matching { it instanceof Test }.all {
