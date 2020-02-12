@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class VideoSizeAdapter {
 
     @ToJson
-    public int[] toJson(VideoSize videoSize) throws Exception {
+    public int[] toJson(VideoSize videoSize) {
         if (videoSize == null) {
             throw new NullPointerException("Expected video size not to be null.");
         }

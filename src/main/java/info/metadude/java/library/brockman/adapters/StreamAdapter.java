@@ -14,12 +14,12 @@ import java.util.Set;
 public class StreamAdapter {
 
     @ToJson
-    public String toJson(Stream stream) throws Exception {
+    public String toJson(Stream stream) {
         throw new UnsupportedOperationException("Not yet implemented.");
     }
 
     @FromJson
-    public Stream fromJson(StreamJson streamJson) throws Exception {
+    public Stream fromJson(StreamJson streamJson) {
         String slug = streamJson.slug;
         String display = streamJson.display;
         boolean isTranslated = streamJson.isTranslated;
