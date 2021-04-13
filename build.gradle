@@ -3,11 +3,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.27.0"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
     }
 }
 
-apply plugin: "com.github.ben-manes.versions"
+apply from: "gradle/versions.gradle"
 apply plugin: "java"
 
 repositories {
