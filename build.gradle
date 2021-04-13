@@ -25,7 +25,7 @@ compileJava {
 dependencies {
     compile "com.squareup.retrofit2:retrofit:2.6.4"
     compile "com.squareup.retrofit2:converter-moshi:2.6.4"
-    compile "com.squareup.okhttp3:okhttp:3.12.8"
+    compile "com.squareup.okhttp3:okhttp:3.12.13"
     compile "com.squareup.moshi:moshi:1.9.2"
 
     testCompile "junit:junit:4.13.2"
