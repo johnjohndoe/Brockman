@@ -55,7 +55,6 @@ your top level `build.gradle`:
 ```
 allprojects {
     repositories {
-        jcenter()
         mavenLocal()
     }
 }
@@ -77,7 +76,6 @@ Therefore, add JitPack to your top level `build.gradle`:
 ```groovy
 allprojects {
     repositories {
-        jcenter()
         maven { url 'https://jitpack.io' }
     }
 }
