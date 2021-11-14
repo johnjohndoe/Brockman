@@ -23,13 +23,13 @@ compileJava {
 }
 
 dependencies {
-    compile "com.squareup.retrofit2:retrofit:2.6.4"
-    compile "com.squareup.retrofit2:converter-moshi:2.6.4"
-    compile "com.squareup.okhttp3:okhttp:3.12.13"
-    compile "com.squareup.moshi:moshi:1.12.0"
+    implementation "com.squareup.retrofit2:retrofit:2.6.4"
+    implementation "com.squareup.retrofit2:converter-moshi:2.6.4"
+    implementation "com.squareup.okhttp3:okhttp:3.12.13"
+    implementation "com.squareup.moshi:moshi:1.12.0"
 
-    testCompile "junit:junit:4.13.2"
-    testCompile "org.assertj:assertj-core:3.21.0"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.assertj:assertj-core:3.21.0"
 }
 
 tasks.matching { it instanceof Test }.all {
