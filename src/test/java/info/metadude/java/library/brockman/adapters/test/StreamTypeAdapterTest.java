@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(JUnit4.class)
 public final class StreamTypeAdapterTest {
 
-    protected final StreamTypeAdapter adapter = new StreamTypeAdapter();
+    private final StreamTypeAdapter adapter = new StreamTypeAdapter();
 
     @Test
     public void toJsonWithAudio() {

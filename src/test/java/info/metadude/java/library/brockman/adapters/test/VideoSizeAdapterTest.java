@@ -14,11 +14,11 @@ import static org.junit.Assert.fail;
 @RunWith(JUnit4.class)
 public final class VideoSizeAdapterTest {
 
-    protected final VideoSizeAdapter adapter = new VideoSizeAdapter();
+    private final VideoSizeAdapter adapter = new VideoSizeAdapter();
 
-    protected final int[] dimensions = new int[]{1024, 768};
+    private final int[] dimensions = new int[]{1024, 768};
 
-    protected final VideoSize videoSize = new VideoSize(1024, 768);
+    private final VideoSize videoSize = new VideoSize(1024, 768);
 
     @Test
     public void fromJsonWithWidthAndHeight() throws Exception {

@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(JUnit4.class)
 public final class UrlTypeAdapterTest {
 
-    protected final UrlTypeAdapter adapter = new UrlTypeAdapter();
+    private final UrlTypeAdapter adapter = new UrlTypeAdapter();
 
     @Test
     public void toJsonWithHls() {

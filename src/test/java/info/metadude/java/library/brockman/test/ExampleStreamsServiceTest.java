@@ -25,7 +25,7 @@ import static org.junit.Assert.fail;
 @RunWith(JUnit4.class)
 public final class ExampleStreamsServiceTest {
 
-    protected StreamsService streamsService;
+    private StreamsService streamsService;
 
     @Before
     public void initStreamService() {
