@@ -4,6 +4,7 @@ package info.metadude.java.library.brockman.models;
 import com.squareup.moshi.Json;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Room {
 
@@ -43,23 +44,17 @@ public class Room {
             return false;
         }
         Room room = (Room) other;
-        return !(display != null ? !display.equals(room.display) : room.display != null) &&
-                !(link != null ? !link.equals(room.link) : room.link != null) &&
-                !(scheduleName != null ? !scheduleName.equals(room.scheduleName) : room.scheduleName != null) &&
-                !(slug != null ? !slug.equals(room.slug) : room.slug != null) &&
-                !(streams != null ? !streams.equals(room.streams) : room.streams != null) &&
-                !(thumb != null ? !thumb.equals(room.thumb) : room.thumb != null);
+        return Objects.equals(display, room.display) &&
+                Objects.equals(link, room.link) &&
+                Objects.equals(scheduleName, room.scheduleName) &&
+                Objects.equals(slug, room.slug) &&
+                Objects.equals(streams, room.streams) &&
+                Objects.equals(thumb, room.thumb);
     }
 
     @Override
     public int hashCode() {
-        int result = display != null ? display.hashCode() : 0;
-        result = 31 * result + (link != null ? link.hashCode() : 0);
-        result = 31 * result + (scheduleName != null ? scheduleName.hashCode() : 0);
-        result = 31 * result + (slug != null ? slug.hashCode() : 0);
-        result = 31 * result + (streams != null ? streams.hashCode() : 0);
-        result = 31 * result + (thumb != null ? thumb.hashCode() : 0);
-        return result;
+        return Objects.hash(display, link, scheduleName, slug, streams, thumb);
     }
 
     @Override

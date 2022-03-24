@@ -2,6 +2,7 @@
 package info.metadude.java.library.brockman.models;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Stream {
 
@@ -61,22 +62,16 @@ public class Stream {
         }
         Stream stream = (Stream) other;
         return isTranslated == stream.isTranslated &&
-                !(display != null ? !display.equals(stream.display) : stream.display != null) &&
-                !(slug != null ? !slug.equals(stream.slug) : stream.slug != null) &&
+                Objects.equals(display, stream.display) &&
+                Objects.equals(slug, stream.slug) &&
                 type == stream.type &&
-                !(videoSize != null ? !videoSize.equals(stream.videoSize) : stream.videoSize != null) &&
-                !(urls != null ? !urls.equals(stream.urls) : stream.urls != null);
+                Objects.equals(videoSize, stream.videoSize) &&
+                Objects.equals(urls, stream.urls);
     }
 
     @Override
     public int hashCode() {
-        int result = display != null ? display.hashCode() : 0;
-        result = 31 * result + (isTranslated ? 1 : 0);
-        result = 31 * result + (slug != null ? slug.hashCode() : 0);
-        result = 31 * result + (type != null ? type.hashCode() : 0);
-        result = 31 * result + (videoSize != null ? videoSize.hashCode() : 0);
-        result = 31 * result + (urls != null ? urls.hashCode() : 0);
-        return result;
+        return Objects.hash(display, isTranslated, slug, type, videoSize, urls);
     }
 
     @Override

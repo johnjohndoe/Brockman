@@ -1,6 +1,8 @@
 
 package info.metadude.java.library.brockman.models;
 
+import java.util.Objects;
+
 public class Url {
 
     public enum TYPE {
@@ -48,19 +50,14 @@ public class Url {
         }
         Url otherUrl = (Url) other;
         return type == otherUrl.type &&
-                !(display != null ? !display.equals(otherUrl.display) : otherUrl.display != null) &&
-                !(tech != null ? !tech.equals(otherUrl.tech) : otherUrl.tech != null) &&
-                !(url != null ? !url.equals(otherUrl.url) : otherUrl.url != null);
-
+                Objects.equals(display, otherUrl.display) &&
+                Objects.equals(tech, otherUrl.tech) &&
+                Objects.equals(url, otherUrl.url);
     }
 
     @Override
     public int hashCode() {
-        int result = type != null ? type.hashCode() : 0;
-        result = 31 * result + (display != null ? display.hashCode() : 0);
-        result = 31 * result + (tech != null ? tech.hashCode() : 0);
-        result = 31 * result + (url != null ? url.hashCode() : 0);
-        return result;
+        return Objects.hash(type, display, tech, url);
     }
 
     @Override

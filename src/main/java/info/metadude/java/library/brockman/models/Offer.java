@@ -2,6 +2,7 @@
 package info.metadude.java.library.brockman.models;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Offer {
 
@@ -48,27 +49,19 @@ public class Offer {
             return false;
         }
         Offer offer = (Offer) other;
-        return author != null ? author.equals(offer.author) : offer.author == null
-                && (conference != null ? conference.equals(offer.conference) : offer.conference == null
-                && (description != null ? description.equals(offer.description) : offer.description == null
-                && (endsAt != null ? endsAt.equals(offer.endsAt) : offer.endsAt == null
-                && (groups != null ? groups.equals(offer.groups) : offer.groups == null
-                && (keywords != null ? keywords.equals(offer.keywords) : offer.keywords == null
-                && (slug != null ? slug.equals(offer.slug) : offer.slug == null
-                && (startsAt != null ? startsAt.equals(offer.startsAt) : offer.startsAt == null)))))));
+        return Objects.equals(author, offer.author) &&
+                Objects.equals(conference, offer.conference) &&
+                Objects.equals(description, offer.description) &&
+                Objects.equals(endsAt, offer.endsAt) &&
+                Objects.equals(groups, offer.groups) &&
+                Objects.equals(keywords, offer.keywords) &&
+                Objects.equals(slug, offer.slug) &&
+                Objects.equals(startsAt, offer.startsAt);
     }
 
     @Override
     public int hashCode() {
-        int result = author != null ? author.hashCode() : 0;
-        result = 31 * result + (conference != null ? conference.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (endsAt != null ? endsAt.hashCode() : 0);
-        result = 31 * result + (groups != null ? groups.hashCode() : 0);
-        result = 31 * result + (keywords != null ? keywords.hashCode() : 0);
-        result = 31 * result + (slug != null ? slug.hashCode() : 0);
-        result = 31 * result + (startsAt != null ? startsAt.hashCode() : 0);
-        return result;
+        return Objects.hash(author, conference, description, endsAt, groups, keywords, slug, startsAt);
     }
 
     @Override

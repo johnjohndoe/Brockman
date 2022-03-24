@@ -1,6 +1,7 @@
 package info.metadude.java.library.brockman.models;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Group {
 
@@ -21,16 +22,14 @@ public class Group {
         if (other == null || getClass() != other.getClass()) {
             return false;
         }
-        Group groupObject = (Group) other;
-        return group != null ? group.equals(groupObject.group) : groupObject.group == null
-                && (rooms != null ? rooms.equals(groupObject.rooms) : groupObject.rooms == null);
+        Group otherGroup = (Group) other;
+        return Objects.equals(group, otherGroup.group) &&
+                Objects.equals(rooms, otherGroup.rooms);
     }
 
     @Override
     public int hashCode() {
-        int result = group != null ? group.hashCode() : 0;
-        result = 31 * result + (rooms != null ? rooms.hashCode() : 0);
-        return result;
+        return Objects.hash(group, rooms);
     }
 
     @Override

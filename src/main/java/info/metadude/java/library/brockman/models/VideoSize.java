@@ -1,5 +1,7 @@
 package info.metadude.java.library.brockman.models;
 
+import java.util.Objects;
+
 public class VideoSize {
 
     public final int height;
@@ -25,9 +27,7 @@ public class VideoSize {
 
     @Override
     public int hashCode() {
-        int result = height;
-        result = 31 * result + width;
-        return result;
+        return Objects.hash(height, width);
     }
 
     @Override
