@@ -50,7 +50,7 @@ public final class VideoSizeAdapterTest {
     }
 
     @Test
-    public void toJsonWithVideoSize() throws Exception {
+    public void toJsonWithVideoSize() {
         assertThat(adapter.toJson(videoSize))
                 .isEqualTo(dimensions);
     }
